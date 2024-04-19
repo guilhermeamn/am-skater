@@ -1,0 +1,524 @@
+******************************************************************************
+                  TI ARM Linker Unix v18.1.4                   
+******************************************************************************
+>> Linked Thu Feb 13 00:05:48 2020
+
+OUTPUT FILE NAME:   <Am Skater Game.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00003b79
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00003e08  0003c1f8  R  X
+  SRAM                  20000000   00008000  00000508  00007af8  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00003e10   00003e10    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00002002   00002002    r-- .const
+  00002270    00002270    00001ac2   00001ac2    r-x .text
+  00003d38    00003d38    000000d8   000000d8    r-- .cinit
+20000000    20000000    00000508   00000000    rw-
+  20000000    20000000    00000200   00000000    rw- .stack
+  20000200    20000200    000001f8   00000000    rw- .bss
+  200003f8    200003f8    00000110   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.const     0    0000026c    00002002     
+                  0000026c    000001f8     skater.obj (.const:.string:ajuda1_Bitmap)
+                  00000464    000001f8     skater.obj (.const:.string:ajuda3_Bitmap)
+                  0000065c    000001f8     skater.obj (.const:.string:ajuda_Bitmap)
+                  00000854    000001f8     skater.obj (.const:.string:game_over2_Bitmap)
+                  00000a4c    000001f8     skater.obj (.const:.string:game_over_Bitmap)
+                  00000c44    000001f8     skater.obj (.const:.string:menu_Bitmap)
+                  00000e3c    000001f8     skater.obj (.const:.string:stage1_Bitmap)
+                  00001034    000001f8     skater.obj (.const:.string:stage2_Bitmap)
+                  0000122c    000001f8     skater.obj (.const:.string:stage3_Bitmap)
+                  00001424    000001f8     skater.obj (.const:.string:stage4_Bitmap)
+                  0000161c    000001f8     skater.obj (.const:.string:stagebonus_Bitmap)
+                  00001814    000001f8     skater.obj (.const:.string:youwin2_Bitmap)
+                  00001a0c    000001f8     skater.obj (.const:.string:youwin_Bitmap)
+                  00001c04    000001e0     Nokia5110.obj (.const:ASCII)
+                  00001de4    00000070     Nokia5110.obj (.const:.string:$P$T0$1)
+                  00001e54    00000069     skater.obj (.const:.string:circulo_Bitmap)
+                  00001ebd    00000068     skater.obj (.const:.string:skater1_Bitmap)
+                  00001f25    00000068     skater.obj (.const:.string:skater2_Bitmap)
+                  00001f8d    00000068     skater.obj (.const:.string:skater3_Bitmap)
+                  00001ff5    00000068     skater.obj (.const:.string:skater4_Bitmap)
+                  0000205d    00000068     skater.obj (.const:.string:skater5_Bitmap)
+                  000020c5    00000054     skater.obj (.const:.string:bg_Bitmap)
+                  00002119    00000036     skater.obj (.const:.string:scorefinal2_Bitmap)
+                  0000214f    00000036     skater.obj (.const:.string:scorefinal3_Bitmap)
+                  00002185    00000036     skater.obj (.const:.string:scorefinal_Bitmap)
+                  000021bb    00000016     skater.obj (.const:.string:obsinicio_Bitmap)
+                  000021d1    00000015     skater.obj (.const:.string:skate_Bitmap)
+                  000021e6    00000012     skater.obj (.const:.string:bg1_Bitmap)
+                  000021f8    00000010     skater.obj (.const:.string:scorebg_Bitmap)
+                  00002208    0000000b     skater.obj (.const:.string:obs1_Bitmap)
+                  00002213    0000000b     skater.obj (.const:.string:obs2_Bitmap)
+                  0000221e    0000000b     skater.obj (.const:.string:obs3_Bitmap)
+                  00002229    0000000b     skater.obj (.const:.string:obs4_Bitmap)
+                  00002234    00000008     Nokia5110.obj (.const:.string:Masks)
+                  0000223c    00000005     skater.obj (.const:.string:cinco_Bitmap)
+                  00002241    00000005     skater.obj (.const:.string:dois_Bitmap)
+                  00002246    00000005     skater.obj (.const:.string:nove_Bitmap)
+                  0000224b    00000005     skater.obj (.const:.string:oito_Bitmap)
+                  00002250    00000005     skater.obj (.const:.string:quatro_Bitmap)
+                  00002255    00000005     skater.obj (.const:.string:seis_Bitmap)
+                  0000225a    00000005     skater.obj (.const:.string:sete_Bitmap)
+                  0000225f    00000005     skater.obj (.const:.string:tres_Bitmap)
+                  00002264    00000005     skater.obj (.const:.string:um_Bitmap)
+                  00002269    00000005     skater.obj (.const:.string:zero_Bitmap)
+
+.text      0    00002270    00001ac2     
+                  00002270    00000b00     Nokia5110.obj (.text)
+                  00002d70    0000092c     skater.obj (.text)
+                  0000369c    00000132     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  000037ce    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.c.obj (.text:_nop)
+                  000037d0    0000011c     botoes.obj (.text)
+                  000038ec    000000f4     driverlib.lib : sysctl.obj (.text:SysCtlClockSet)
+                  000039e0    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  00003a7c    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00003ae4    00000050     main.obj (.text)
+                  00003b34    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00003b78    00000038                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00003bb0    00000034     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  00003be4    00000034     rtsv7M4_T_le_v4SPD16_eabi.lib : rand.c.obj (.text:rand)
+                  00003c18    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00003c42    00000002     --HOLE-- [fill = 0]
+                  00003c44    00000024     rtsv7M4_T_le_v4SPD16_eabi.lib : rand.c.obj (.text:srand)
+                  00003c68    00000018     driverlib.lib : gpio.obj (.text:GPIOPinTypeGPIOOutput)
+                  00003c80    00000014                   : systick.obj (.text:SysTickDisable)
+                  00003c94    00000014                   : systick.obj (.text:SysTickEnable)
+                  00003ca8    00000014                   : systick.obj (.text:SysTickIntEnable)
+                  00003cbc    00000012                   : gpio.obj (.text:GPIOPinTypeGPIOInput)
+                  00003cce    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  00003ce0    00000010     driverlib.lib : systick.obj (.text:SysTickPeriodSet)
+                  00003cf0    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00003cfe    00000002     --HOLE-- [fill = 0]
+                  00003d00    0000000c     driverlib.lib : systick.obj (.text:SysTickValueGet)
+                  00003d0c    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00003d18    00000006     driverlib.lib : gpio.obj (.text:GPIOPinRead)
+                  00003d1e    00000006                   : gpio.obj (.text:GPIOPinWrite)
+                  00003d24    00000006                   : sysctl.obj (.text:SysCtlDelay)
+                  00003d2a    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00003d2e    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.cinit     0    00003d38    000000d8     
+                  00003d38    000000b1     (.cinit..data.load) [load image, compression = lzss]
+                  00003de9    00000003     --HOLE-- [fill = 0]
+                  00003dec    0000000c     (__TI_handler_table)
+                  00003df8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00003e00    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss       0    20000200    000001f8     UNINITIALIZED
+                  20000200    000001f8     (.common:Screen)
+
+.data      0    200003f8    00000110     UNINITIALIZED
+                  200003f8    00000064     skater.obj (.data)
+                  2000045c    0000003c     skater.obj (.data:posicao_obstaculo_X)
+                  20000498    00000028     skater.obj (.data:numeros_Bitmap)
+                  200004c0    00000018     skater.obj (.data:stage)
+                  200004d8    00000014     skater.obj (.data:skater)
+                  200004ec    00000010     skater.obj (.data:obstac)
+                  200004fc    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.c.obj (.data:$O1$$)
+                  20000504    00000004                                   : rand.c.obj (.data)
+
+.stack     0    20000000    00000200     UNINITIALIZED
+                  20000000    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  20000004    000001fc     --HOLE--
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    ./
+       skater.obj                     2348   7594      260    
+       Nokia5110.obj                  2816   600       504    
+       tm4c123gh6pm_startup_ccs.obj   12     620       0      
+       botoes.obj                     284    0         0      
+       main.obj                       80     0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         5540   8814      764    
+                                                              
+    /home/gui/.wine/drive_c/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib
+       gpio.obj                       402    0         0      
+       sysctl.obj                     302    0         0      
+       systick.obj                    88     0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         792    0         0      
+                                                              
+    /home/gui/ccs/ccsv8/tools/compiler/ti-cgt-arm_18.1.4.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib
+       memcpy_t2.asm.obj              156    0         0      
+       copy_decompress_lzss.c.obj     104    0         0      
+       rand.c.obj                     88     0         4      
+       autoinit.c.obj                 68     0         0      
+       boot_cortex_m.c.obj            56     0         0      
+       copy_zero_init.c.obj           18     0         0      
+       copy_decompress_none.c.obj     14     0         0      
+       _lock.c.obj                    2      0         8      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         514    0         12     
+                                                              
+       Stack:                         0      0         512    
+       Linker Generated:              0      213       0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   6846   9027      1288   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00003e00 records: 2, size/record: 8, table size: 16
+	.data: load addr=00003d38, load size=000000b1 bytes, run addr=200003f8, run size=00000110 bytes, compression=lzss
+	.bss: load addr=00003df8, load size=00000008 bytes, run addr=20000200, run size=000001f8 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00003dec records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+00003d2f  C$$EXIT                       
+00003c19  GPIODirModeSet                
+0000369d  GPIOPadConfigSet              
+00003d19  GPIOPinRead                   
+00003cbd  GPIOPinTypeGPIOInput          
+00003c69  GPIOPinTypeGPIOOutput         
+00003d1f  GPIOPinWrite                  
+20000434  MAX                           
+00002234  Masks                         
+000026b9  Nokia5110_Clear               
+00002915  Nokia5110_ClearBuffer         
+00002949  Nokia5110_ClrPxl              
+0000293f  Nokia5110_DisplayBuffer       
+000026e9  Nokia5110_DrawFullImage       
+00002bbf  Nokia5110_DrawImage           
+00002c09  Nokia5110_DrawImage_status    
+000022df  Nokia5110_Init                
+000023f9  Nokia5110_OutChar             
+00002439  Nokia5110_OutString           
+00002465  Nokia5110_OutUDec             
+00002731  Nokia5110_PrintBMP            
+000029a1  Nokia5110_PrintBMP2           
+00002669  Nokia5110_SetCursor           
+0000297b  Nokia5110_SetPxl              
+00002a59  Nokia5110_SetPxl_status       
+00002a85  Nokia5110_img                 
+00002b25  Nokia5110_img_16              
+00003d0d  ResetISR                      
+20000200  Screen                        
+000038ed  SysCtlClockSet                
+00003d25  SysCtlDelay                   
+00003bb1  SysCtlPeripheralEnable        
+00003c81  SysTickDisable                
+00003c95  SysTickEnable                 
+00003ca9  SysTickIntEnable              
+00003ce1  SysTickPeriodSet              
+00003d01  SysTickValueGet               
+00002d41  VerificaBufferPixel           
+20000200  __STACK_END                   
+00000200  __STACK_SIZE                  
+20000200  __STACK_TOP                   
+00003e00  __TI_CINIT_Base               
+00003e10  __TI_CINIT_Limit              
+00003dec  __TI_Handler_Table_Base       
+00003df8  __TI_Handler_Table_Limit      
+00003b35  __TI_auto_init_nobinit_nopinit
+00003a7d  __TI_decompress_lzss          
+00003cf1  __TI_decompress_none          
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+00003ccf  __TI_zero_init_nomemset       
+000039e1  __aeabi_memcpy                
+000039e1  __aeabi_memcpy4               
+000039e1  __aeabi_memcpy8               
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+UNDEFED   __mpu_init                    
+20000000  __stack                       
+00003b79  _c_int00_noargs               
+200004fc  _lock                         
+000037cf  _nop                          
+UNDEFED   _system_post_cinit            
+00003d2b  _system_pre_init              
+20000500  _unlock                       
+00003d2f  abort                         
+00002f37  ajuda                         
+0000026c  ajuda1_Bitmap                 
+00000464  ajuda3_Bitmap                 
+0000065c  ajuda_Bitmap                  
+00002d71  background                    
+000021e6  bg1_Bitmap                    
+000020c5  bg_Bitmap                     
+ffffffff  binit                         
+00002f8d  botoes                        
+0000223c  cinco_Bitmap                  
+00001e54  circulo_Bitmap                
+00003565  cloud                         
+000037fd  configura_PINO_PULLUP         
+0000381b  configuracoes                 
+20000430  debouncer                     
+20000438  debouncerJump                 
+2000043c  debouncerNuvem                
+20000440  debouncerNuvem2               
+20000444  debouncerSkate                
+000037d1  destrava_PINO                 
+00002241  dois_Bitmap                   
+00003421  func_obstaculo                
+00000000  g_pfnVectors                  
+00000854  game_over2_Bitmap             
+00000a4c  game_over_Bitmap              
+0000323d  ganhou                        
+00002e51  inicio                        
+20000418  inverte                       
+0000386b  le_matriz                     
+00003aed  main                          
+000039e1  memcpy                        
+00002edf  menu                          
+00000c44  menu_Bitmap                   
+000031d1  morre                         
+00002246  nove_Bitmap                   
+20000498  numeros_Bitmap                
+2000040c  nuvem                         
+20000424  obs                           
+00002208  obs1_Bitmap                   
+00002213  obs2_Bitmap                   
+0000221e  obs3_Bitmap                   
+00002229  obs4_Bitmap                   
+000021bb  obsinicio_Bitmap              
+200004ec  obstac                        
+0000224b  oito_Bitmap                   
+000032b1  over                          
+20000420  p                             
+20000450  pontuacaoTOTAL                
+20000428  pos                           
+2000041c  pos_skate                     
+20000410  posicao_nuvem                 
+20000414  posicao_nuvem2                
+2000045c  posicao_obstaculo_X           
+20000448  pts                           
+20000454  ptsMax                        
+00002250  quatro_Bitmap                 
+00003be5  rand                          
+00003189  restart                       
+000021f8  scorebg_Bitmap                
+00002119  scorefinal2_Bitmap            
+0000214f  scorefinal3_Bitmap            
+00002185  scorefinal_Bitmap             
+00002255  seis_Bitmap                   
+0000225a  sete_Bitmap                   
+000034f1  skate                         
+000021d1  skate_Bitmap                  
+200004d8  skater                        
+00001ebd  skater1_Bitmap                
+00001f25  skater2_Bitmap                
+00001f8d  skater3_Bitmap                
+00001ff5  skater4_Bitmap                
+0000205d  skater5_Bitmap                
+00003c45  srand                         
+200004c0  stage                         
+00000e3c  stage1_Bitmap                 
+00001034  stage2_Bitmap                 
+0000122c  stage3_Bitmap                 
+00001424  stage4_Bitmap                 
+2000044c  stage_pos                     
+0000161c  stagebonus_Bitmap             
+00003071  start                         
+00003ae5  trataSysTick                  
+0000225f  tres_Bitmap                   
+00002264  um_Bitmap                     
+00003499  verifica                      
+00001814  youwin2_Bitmap                
+00001a0c  youwin_Bitmap                 
+00002269  zero_Bitmap                   
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_static_base__            
+00000000  g_pfnVectors                  
+00000200  __STACK_SIZE                  
+0000026c  ajuda1_Bitmap                 
+00000464  ajuda3_Bitmap                 
+0000065c  ajuda_Bitmap                  
+00000854  game_over2_Bitmap             
+00000a4c  game_over_Bitmap              
+00000c44  menu_Bitmap                   
+00000e3c  stage1_Bitmap                 
+00001034  stage2_Bitmap                 
+0000122c  stage3_Bitmap                 
+00001424  stage4_Bitmap                 
+0000161c  stagebonus_Bitmap             
+00001814  youwin2_Bitmap                
+00001a0c  youwin_Bitmap                 
+00001e54  circulo_Bitmap                
+00001ebd  skater1_Bitmap                
+00001f25  skater2_Bitmap                
+00001f8d  skater3_Bitmap                
+00001ff5  skater4_Bitmap                
+0000205d  skater5_Bitmap                
+000020c5  bg_Bitmap                     
+00002119  scorefinal2_Bitmap            
+0000214f  scorefinal3_Bitmap            
+00002185  scorefinal_Bitmap             
+000021bb  obsinicio_Bitmap              
+000021d1  skate_Bitmap                  
+000021e6  bg1_Bitmap                    
+000021f8  scorebg_Bitmap                
+00002208  obs1_Bitmap                   
+00002213  obs2_Bitmap                   
+0000221e  obs3_Bitmap                   
+00002229  obs4_Bitmap                   
+00002234  Masks                         
+0000223c  cinco_Bitmap                  
+00002241  dois_Bitmap                   
+00002246  nove_Bitmap                   
+0000224b  oito_Bitmap                   
+00002250  quatro_Bitmap                 
+00002255  seis_Bitmap                   
+0000225a  sete_Bitmap                   
+0000225f  tres_Bitmap                   
+00002264  um_Bitmap                     
+00002269  zero_Bitmap                   
+000022df  Nokia5110_Init                
+000023f9  Nokia5110_OutChar             
+00002439  Nokia5110_OutString           
+00002465  Nokia5110_OutUDec             
+00002669  Nokia5110_SetCursor           
+000026b9  Nokia5110_Clear               
+000026e9  Nokia5110_DrawFullImage       
+00002731  Nokia5110_PrintBMP            
+00002915  Nokia5110_ClearBuffer         
+0000293f  Nokia5110_DisplayBuffer       
+00002949  Nokia5110_ClrPxl              
+0000297b  Nokia5110_SetPxl              
+000029a1  Nokia5110_PrintBMP2           
+00002a59  Nokia5110_SetPxl_status       
+00002a85  Nokia5110_img                 
+00002b25  Nokia5110_img_16              
+00002bbf  Nokia5110_DrawImage           
+00002c09  Nokia5110_DrawImage_status    
+00002d41  VerificaBufferPixel           
+00002d71  background                    
+00002e51  inicio                        
+00002edf  menu                          
+00002f37  ajuda                         
+00002f8d  botoes                        
+00003071  start                         
+00003189  restart                       
+000031d1  morre                         
+0000323d  ganhou                        
+000032b1  over                          
+00003421  func_obstaculo                
+00003499  verifica                      
+000034f1  skate                         
+00003565  cloud                         
+0000369d  GPIOPadConfigSet              
+000037cf  _nop                          
+000037d1  destrava_PINO                 
+000037fd  configura_PINO_PULLUP         
+0000381b  configuracoes                 
+0000386b  le_matriz                     
+000038ed  SysCtlClockSet                
+000039e1  __aeabi_memcpy                
+000039e1  __aeabi_memcpy4               
+000039e1  __aeabi_memcpy8               
+000039e1  memcpy                        
+00003a7d  __TI_decompress_lzss          
+00003ae5  trataSysTick                  
+00003aed  main                          
+00003b35  __TI_auto_init_nobinit_nopinit
+00003b79  _c_int00_noargs               
+00003bb1  SysCtlPeripheralEnable        
+00003be5  rand                          
+00003c19  GPIODirModeSet                
+00003c45  srand                         
+00003c69  GPIOPinTypeGPIOOutput         
+00003c81  SysTickDisable                
+00003c95  SysTickEnable                 
+00003ca9  SysTickIntEnable              
+00003cbd  GPIOPinTypeGPIOInput          
+00003ccf  __TI_zero_init_nomemset       
+00003ce1  SysTickPeriodSet              
+00003cf1  __TI_decompress_none          
+00003d01  SysTickValueGet               
+00003d0d  ResetISR                      
+00003d19  GPIOPinRead                   
+00003d1f  GPIOPinWrite                  
+00003d25  SysCtlDelay                   
+00003d2b  _system_pre_init              
+00003d2f  C$$EXIT                       
+00003d2f  abort                         
+00003dec  __TI_Handler_Table_Base       
+00003df8  __TI_Handler_Table_Limit      
+00003e00  __TI_CINIT_Base               
+00003e10  __TI_CINIT_Limit              
+20000000  __stack                       
+20000200  Screen                        
+20000200  __STACK_END                   
+20000200  __STACK_TOP                   
+2000040c  nuvem                         
+20000410  posicao_nuvem                 
+20000414  posicao_nuvem2                
+20000418  inverte                       
+2000041c  pos_skate                     
+20000420  p                             
+20000424  obs                           
+20000428  pos                           
+20000430  debouncer                     
+20000434  MAX                           
+20000438  debouncerJump                 
+2000043c  debouncerNuvem                
+20000440  debouncerNuvem2               
+20000444  debouncerSkate                
+20000448  pts                           
+2000044c  stage_pos                     
+20000450  pontuacaoTOTAL                
+20000454  ptsMax                        
+2000045c  posicao_obstaculo_X           
+20000498  numeros_Bitmap                
+200004c0  stage                         
+200004d8  skater                        
+200004ec  obstac                        
+200004fc  _lock                         
+20000500  _unlock                       
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[155 symbols]

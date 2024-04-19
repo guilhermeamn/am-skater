@@ -1,0 +1,1 @@
+"./Nokia5110.obj" "./botoes.obj" "./main.obj" "./skater.obj" "./tm4c123gh6pm_startup_ccs.obj" "/home/gui/.wine/drive_c/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -llibc.a 
